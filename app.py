@@ -1,5 +1,8 @@
 import streamlit as st
-import tensorflow as tf
+try:
+    import tensorflow as tf
+except ImportError:
+    import tflite_runtime.interpreter as tflite
 import numpy as np
 import cv2
 from PIL import Image
